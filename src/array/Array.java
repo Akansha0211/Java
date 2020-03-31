@@ -28,7 +28,7 @@ public class Array {
         }
 
         // printing the array
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < anotherArray.length; i++) {
             System.out.println(anotherArray[i]);
         }
 
