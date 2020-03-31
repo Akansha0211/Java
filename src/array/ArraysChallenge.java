@@ -18,11 +18,20 @@ public class ArraysChallenge {
         // you will have to figure out how to copy the array elements from the passed array into a new
         // array and sort them and return the new sorted array
         int[] array = getIntegers(5);
-        printArray(array);
+        //printArray(array);
+        int[] sortedArray = sortIntegers(array);
+        printArray(sortedArray);
 
     }
 
+    /**
+     * This method will accept the value of integer array as parameter
+     *
+     * @param capacity is the size of the array
+     * @return the array after user input
+     */
     public static int[] getIntegers(int capacity) {
+        System.out.println("Enter 5 elements");
         int[] values = new int[capacity];
         for (int i = 0; i < values.length; i++) {
             values[i] = scan.nextInt();
@@ -30,12 +39,21 @@ public class ArraysChallenge {
         return values;
     }
 
+    /**
+     * This method will print the array passed to it as a parameter
+     * @param array array to be printed
+     */
     public static void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
     }
 
+    /**
+     * This method will sort the integer array
+     * @param array array to be sorted
+     * @return the sorted array
+     */
     public static int[] sortIntegers(int[] array) {
         int[] sortedArray = new int[array.length];
         for (int i = 0; i < array.length; i++) {
