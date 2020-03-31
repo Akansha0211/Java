@@ -32,13 +32,14 @@ public class Array {
 //            System.out.println(anotherArray[i]);
 //            System.out.println(anotherArray[20]);
 //        }
+        printArray(anotherArray);
 
 
     }
 
     /**
      * This method will print the array
-     *
+     * Instead of printing an array directly just make a method out of it.
      * @param array array to be printed
      */
     public static void printArray(int[] array) {
