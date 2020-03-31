@@ -19,5 +19,19 @@ public class Array {
         System.out.println(myIntArray[3]);
 
 
+        // defining an Integer Array in a different way and  then printing it using for loop...
+        int[] anotherArray = new int[10];
+
+        //assigning elements to an Array
+        for (int i = 0; i < 10; i++) {
+            anotherArray[i] = i + 10;
+        }
+
+        // printing the array
+        for (int i = 0; i < 10; i++) {
+            System.out.println(anotherArray[i]);
+        }
+
+
     }
 }
