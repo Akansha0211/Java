@@ -28,10 +28,23 @@ public class Array {
         }
 
         // printing the array
-        for (int i = 0; i < anotherArray.length; i++) {
-            System.out.println(anotherArray[i]);
-        }
+//        for (int i = 0; i < anotherArray.length; i++) { // easy to maintain code use anotherArray.length
+//            System.out.println(anotherArray[i]);
+//            System.out.println(anotherArray[20]);
+//        }
 
 
     }
+
+    /**
+     * This method will print the array
+     *
+     * @param array array to be printed
+     */
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) { // easy to maintain code use anotherArray.length
+            System.out.println(array[i]);
+        }
+    }
+
 }
