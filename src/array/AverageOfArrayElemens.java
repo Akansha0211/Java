@@ -12,6 +12,7 @@ public class AverageOfArrayElemens {
         for (int i = 0; i < anotherArray.length; i++) {
             System.out.println("Element " + i + " typed value was" + anotherArray);
         }
+        System.out.println("Average is" + getAverage(anotherArray));
 
     }
 
@@ -34,5 +35,19 @@ public class AverageOfArrayElemens {
         }
         return values;
 
+    }
+
+    /**
+     * THis method will return the average of all the array elements
+     *
+     * @param array given to find out the average of all the array elements
+     * @return average of all elements
+     */
+    public static double getAverage(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return (double) sum / array.length;
     }
 }
