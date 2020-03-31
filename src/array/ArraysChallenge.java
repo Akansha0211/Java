@@ -18,6 +18,7 @@ public class ArraysChallenge {
         // you will have to figure out how to copy the array elements from the passed array into a new
         // array and sort them and return the new sorted array
         int[] array = getIntegers(5);
+        printArray(array);
 
     }
 
@@ -27,6 +28,12 @@ public class ArraysChallenge {
             values[i] = scan.nextInt();
         }
         return values;
+    }
+
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
     }
 
 
