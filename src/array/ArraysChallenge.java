@@ -17,8 +17,16 @@ public class ArraysChallenge {
         // and sortIntegers should sort the array and return a new array containing the sorted numbers
         // you will have to figure out how to copy the array elements from the passed array into a new
         // array and sort them and return the new sorted array
-        //int[] array = getIntegers(5);
+        int[] array = getIntegers(5);
 
+    }
+
+    public static int[] getIntegers(int numbers) {
+        int[] values = new int[numbers];
+        for (int i = 0; i < values.length; i++) {
+            values[i] = scan.nextInt();
+        }
+        return values;
     }
 
 
