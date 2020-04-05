@@ -1,5 +1,6 @@
 package array;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArraysChallenge {
@@ -20,7 +21,7 @@ public class ArraysChallenge {
         int[] array = getIntegers(5);
         //printArray(array);
         int[] sortedArray = sortIntegers(array);
-        printArray(sortedArray);
+        printArray(sortedArray); // will print sorted array
 
     }
 
@@ -55,10 +56,12 @@ public class ArraysChallenge {
      * @return the sorted array
      */
     public static int[] sortIntegers(int[] array) {
-        int[] sortedArray = new int[array.length];
-        for (int i = 0; i < array.length; i++) {
-            sortedArray[i] = array[i];
-        }
+//        int[] sortedArray = new int[array.length];
+//        for (int i = 0; i < array.length; i++) {
+//            sortedArray[i] = array[i];
+//        }
+        // alternative way to perform above statements of copying one array into another blank array with desirable size...
+        int[] sortedArray = Arrays.copyOf(array,array.length);
         boolean flag = true;
         int temp;
         while (flag) {
