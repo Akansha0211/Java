@@ -33,4 +33,20 @@ public class MinElementChallenge {
         return array;
     }
 
+    /**
+     * This method will return a minimum integer value in an array.
+     * @param array it is the array in which minimum array is to be find out
+     * @return min integer value in array...
+     */
+    public static int findMin(int[] array){
+        int min = array[0];
+        for (int i = 0; i <array.length ; i++) {
+            if (array[i] < min){
+                min = array[i];
+            }
+
+        }
+        return min;
+    }
+
 }
