@@ -7,7 +7,12 @@ public class ResizeArray {
     private static int [] array = new int[10];
 
     public static void main(String[] args) {
-
+        System.out.println("Enter 10 integers");
+        getInput();
+        System.out.println(array);
+        resizeArray();
+        System.out.println("Enter 12 integers");
+        getInput();
     }
 
     /**
