@@ -25,6 +25,7 @@ public class Main {
         System.out.println("After change in reference variable");
         System.out.println("arr1 = "+ Arrays.toString(arr1));
         System.out.println("arr2 = "+Arrays.toString(arr2));
+        arr2 = new int[]{4,5,6,7,8,9}; // de-referencing the array and size be given like this also by passing the values directly which will be allocated continuous block in memory...
         modify(arr1);
         System.out.println("After modify method");
         System.out.println("arr1 = "+ Arrays.toString(arr1));
