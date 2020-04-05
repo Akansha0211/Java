@@ -9,10 +9,13 @@ public class ResizeArray {
     public static void main(String[] args) {
         System.out.println("Enter 10 integers");
         getInput();
-        System.out.println(array);
+        printArray(array);
         resizeArray();
-        System.out.println("Enter 12 integers");
-        getInput();
+//        System.out.println("Enter 12 integers");
+//        getInput();
+        array[10] = 67;
+        array[11] = 23;
+        printArray(array);
     }
 
     /**
