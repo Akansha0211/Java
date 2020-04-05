@@ -60,7 +60,7 @@ public class ArraysChallenge {
 //        for (int i = 0; i < array.length; i++) {
 //            sortedArray[i] = array[i];
 //        }
-        // alternative way to perform above statements of copying one array into another blank array with desirable size...
+        // alternative way to perform above statements of copying one array into another blank array and can give desirable size to it...
         int[] sortedArray = Arrays.copyOf(array,array.length);
         boolean flag = true;
         int temp;
