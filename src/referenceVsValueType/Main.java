@@ -21,6 +21,11 @@ public class Main {
                                 // same array object is referenced to by two different objects...
         System.out.println("arr1"+ Arrays.toString(arr1));
         System.out.println("arr2"+Arrays.toString(arr2));
+        arr2[0] = 1;
+        System.out.println("After change in reference variable");
+        System.out.println("arr1"+ Arrays.toString(arr1));
+        System.out.println("arr2"+Arrays.toString(arr2));
 
     }
+
 }
