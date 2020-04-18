@@ -39,6 +39,16 @@ public class GroceryList {
     }
 
 
+    /**
+     * This method will remove an item from the ArrayList from any given index.
+     * @param position from which element is to be removed...
+     */
+    public void removeGroceryItem(int position){
+        String theItem = groceryList.get(position);
+        groceryList.remove(position);
+    }
+
+
 
 
 
