@@ -4,9 +4,10 @@ package ArrayList.groceryList;
 import java.util.Scanner;
 
 public class Main {
+    private static Scanner scanner = new Scanner(System.in);
+    private static GroceryList groceryLst = new GroceryList();
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        GroceryList groceryLst = new GroceryList();
+
 
         boolean quit = false;
         int choice = 0;
@@ -27,7 +28,7 @@ public class Main {
                     //addItem();
                     break;
                 case 3:
-                    //modifyItem();
+                   // modifyItem();
                     break;
                 case 4:
                     //removeItem();
@@ -52,5 +53,10 @@ public class Main {
         System.out.println(" 5 -- To search an item in the list");
         System.out.println(" 6 -- To quit the application");
     }
+
+//    public static  void addIem(){
+//        System.out.println("Please enter the grocery item");
+//        groceryLst.
+//    }
 
 }
