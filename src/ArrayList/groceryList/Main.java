@@ -54,9 +54,13 @@ public class Main {
         System.out.println(" 6 -- To quit the application");
     }
 
-//    public static  void addIem(){
-//        System.out.println("Please enter the grocery item");
-//        groceryLst.
-//    }
+    /**
+     * This method will add an item to the ArrayList
+     * It will call the method addGroceryItem in the this method and will give the Item to be added through the console...
+     */
+    public static  void addIem(){
+        System.out.println("Please enter the grocery item");
+        groceryLst.addGroceryItem(scanner.nextLine());
+    }
 
 }
