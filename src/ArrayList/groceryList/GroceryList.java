@@ -28,6 +28,17 @@ public class GroceryList {
     }
 
 
+    /**
+     * This method will modify an element at any particular index in the List
+     * @param position at which a new replacement item is to be added
+     * @param newItem replacement item ....
+     */
+    public void modifyGroceryList(int position, String newItem){
+        groceryList.set(position,newItem);
+        System.out.println("Grocery Item "+ (position+1)+" is modified");
+    }
+
+
 
 
 
