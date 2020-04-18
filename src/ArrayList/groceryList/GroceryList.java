@@ -49,6 +49,16 @@ public class GroceryList {
     }
 
 
+    /**
+     * This method will return the index of the item to be searched...
+     * @param searchItem
+     * @return
+     */
+    public int findItem(String searchItem){
+        return groceryList.indexOf(searchItem);
+    }
+
+
 
 
 
