@@ -63,4 +63,18 @@ public class Main {
         groceryLst.addGroceryItem(scanner.nextLine());
     }
 
+    /**
+     *  This method wil modify the element in List at a particular index
+     *  will call for modifyGroceryList() method .
+     */
+    public static void modifyItem(){
+        System.out.println("Enter the item number");
+        int itemNo = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Enter replacement item");
+        String newItem = scanner.nextLine();
+        groceryLst.modifyGroceryList(itemNo,newItem);
+
+    }
+
 }
