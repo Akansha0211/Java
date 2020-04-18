@@ -25,13 +25,13 @@ public class Main {
                     groceryLst.printGroceryList();
                     break;
                 case 2:
-                    //addItem();
+                    addItem();
                     break;
                 case 3:
-                   // modifyItem();
+                    modifyItem();
                     break;
                 case 4:
-                    //removeItem();
+                    removeItem();
                     break;
                 case 5:
                     //searchForItem();
@@ -58,7 +58,7 @@ public class Main {
      * This method will add an item to the ArrayList
      * It will call the method addGroceryItem in the this method and will give the Item to be added through the console...
      */
-    public static  void addIem(){
+    public static  void addItem(){
         System.out.println("Please enter the grocery item");
         groceryLst.addGroceryItem(scanner.nextLine());
     }
@@ -75,6 +75,17 @@ public class Main {
         String newItem = scanner.nextLine();
         groceryLst.modifyGroceryList(itemNo,newItem);
 
+    }
+
+    /**
+     * This method will remove an item from the grocery List.
+     * will call removeGroceryItem() method in it from the GroceryList class..
+     */
+    public static void removeItem(){
+        System.out.println("Enter the item number");
+        int itemNo = scanner.nextInt();
+        scanner.nextLine();
+        groceryLst.removeGroceryItem(itemNo);
     }
 
 }
