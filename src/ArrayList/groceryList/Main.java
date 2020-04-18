@@ -10,7 +10,7 @@ public class Main {
 
         boolean quit = false;
         int choice = 0;
-        //printInstructions();
+        printInstructions();
         while (!quit) {
             System.out.println("Enter your choice ");
             choice = scanner.nextInt();
@@ -18,7 +18,7 @@ public class Main {
 
             switch (choice){
                 case 0:
-                    //printInstructions();
+                    printInstructions();
                     break;
                 case 1:
                     groceryLst.printGroceryList();
@@ -41,6 +41,16 @@ public class Main {
 
             }
         }
+    }
+    public static void printInstructions(){
+        System.out.println("\n Press");
+        System.out.println(" 0 -- To print choice options ");
+        System.out.println(" 1 -- To print the list of grocery items");
+        System.out.println(" 2 -- To add an item in the list.");
+        System.out.println(" 3 -- To modify an item in the list.");
+        System.out.println(" 4 -- To remove an item from the list");
+        System.out.println(" 5 -- To search an item in the list");
+        System.out.println(" 6 -- To quit the application");
     }
 
 }
