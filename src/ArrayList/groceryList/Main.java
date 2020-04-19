@@ -33,7 +33,7 @@ public class Main {
                     removeItem();
                     break;
                 case 5:
-                    //searchForItem();
+                    searchItem();
                     break;
                 case 6:
                     quit = true;
