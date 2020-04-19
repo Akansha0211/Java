@@ -58,7 +58,7 @@ public class Main {
             doubleValues.add(Double.valueOf(dbl));  // boxing
         }
         for (int i = 0; i<doubleValues.size();i++){
-//            double values = doubleValues.get(i).doubleValue(); // unboxing
+//            double values = doubleValues.get(i); // unboxing
 //            System.out.println(i+ " -->"+ values);
 
 
