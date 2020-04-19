@@ -27,10 +27,26 @@ public class GroceryList {
         }
     }
 
-
-//    public  void modifyGroceryList(String newItem){
-//
-//    }
+    /**
+     * This method will an item in the list
+     * For example :
+     * You have a prepared a grocery list :
+     * milk
+     * butter
+     * cheese
+     * mayonnaise
+     * bread
+     * Now  you want to modify cheese to cream cheese .
+     * For that from naive user's perspective he need to  modify by name of item not considering the item number and inner details.
+     * @param currentItem which is to be modified
+     * @param newItem new tem to be placed in place of modified item (i.e current item)...
+     **/
+    public  void modifyGroceryList(String currentItem,String newItem){
+        int position = findItem(currentItem);
+        if (position >= 0){
+            modifyGroceryList(position,newItem);
+        }
+    }
 
 
     /**

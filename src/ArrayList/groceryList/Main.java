@@ -62,19 +62,31 @@ public class Main {
         groceryLst.addGroceryItem(scanner.nextLine());
     }
 
-    /**
-     *  This method wil modify the element in List at a particular index
-     *  will call for modifyGroceryList() method .
-     */
+//    /**
+//     *  This method wil modify the element in List at a particular index
+//     *  will call for modifyGroceryList() method .
+//     */
+//    public static void modifyItem(){
+//        System.out.println("Enter the item number");
+//        int itemNo = scanner.nextInt();
+//        scanner.nextLine();
+//        System.out.println("Enter replacement item");
+//        String newItem = scanner.nextLine();
+//        groceryLst.modifyGroceryList(itemNo -1,newItem);
+//
+//    }
+
+
     public static void modifyItem(){
-        System.out.println("Enter the item number");
-        int itemNo = scanner.nextInt();
+        System.out.println("Enter current item name");
+        String currentItem = scanner.nextLine();
         scanner.nextLine();
-        System.out.println("Enter replacement item");
+        System.out.println("Enter new item");
         String newItem = scanner.nextLine();
-        groceryLst.modifyGroceryList(itemNo -1,newItem);
+       // groceryLst.modifyGroceryList();
 
     }
+
 
     /**
      * This method will remove an item from the grocery List.
@@ -87,16 +99,16 @@ public class Main {
         groceryLst.removeGroceryItem(itemNo -1);
     }
 
-    public static void searchItem(){
-        System.out.println("Item to search for");
-        String searchItem = scanner.nextLine();
-        if (groceryLst.findItem(searchItem)!= null){
-            System.out.println("Found "+ searchItem+ "in the grocery list");
-        }
-        else{
-            System.out.println(searchItem+" is not found in the shopping list");
-        }
-
-    }
+//    public static void searchItem(){
+//        System.out.println("Item to search for");
+//        String searchItem = scanner.nextLine();
+//        if (groceryLst.findItem(searchItem)!= null){
+//            System.out.println("Found "+ searchItem+ "in the grocery list");
+//        }
+//        else{
+//            System.out.println(searchItem+" is not found in the shopping list");
+//        }
+//
+//    }
 
 }
