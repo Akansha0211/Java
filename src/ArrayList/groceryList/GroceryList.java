@@ -113,14 +113,27 @@ public class GroceryList {
     /**
      * This method will return the index number of the search item.
      * @param searchItem item whose index is to be found
-     * @returnn  index of searchItem..
+     * @returnn  index of searchItem..if it returns 0 or any index greater than zero that means item is present in the list and -1 if item not present....
      */
     public int findItem(String searchItem){
         return groceryList.indexOf(searchItem);
     }
 
 
+    /**
+     * This method will find whether a given item is present in the list or not
+     * It will call findItem method .
+     * @param searchItem which is to be searched.
+     * @return boolean value  true if item is found in the list otherwise false...
+     */
+    public boolean onFile(String searchItem){
+        int position = findItem(searchItem);
+        if (position >= 0){
+            return  true;
+        }
+       else return false;
 
 
+    }
 
 }
