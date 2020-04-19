@@ -11,15 +11,20 @@ public class PhoneDirectory {
         this.myContacts = new ArrayList<Contact>();
     }
 
-//    public boolean addNewContact(Contact contact){
-//        if (findContact(contact)>= 0) {
-//            System.out.println("Contact is already on the file ");
-//            return false;
-//        }
-//
-//        myContacts.add(contact);
-//        return true;
-//    }
+    /**
+     * This method will add an item to the Phone Directory
+     * @param contact  which is to be added.
+     * @return whther a contact can be added or not...
+     */
+    public boolean addNewContact(Contact contact){
+        if (findContact(contact)>= 0) {
+            System.out.println("Contact is already on the file ");
+            return false;
+        }
+
+        myContacts.add(contact);
+        return true;
+    }
 
 
     /**
