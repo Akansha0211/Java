@@ -6,6 +6,10 @@ public class GroceryList {
     private ArrayList<String> groceryList = new ArrayList<>();
 
 
+    public ArrayList<String> getGroceryList(){
+        return groceryList;
+    }
+
     /**
      * This method will add an item to the grocery list.
      * uses add() method of the ArrayList class
