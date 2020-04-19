@@ -82,7 +82,7 @@ public class Main {
         String currentItem = scanner.nextLine();
         System.out.println("Enter new item");
         String newItem = scanner.nextLine();
-       // groceryLst.modifyGroceryList();
+       groceryLst.modifyGroceryList(currentItem,newItem);
 
     }
 
