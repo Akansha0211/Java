@@ -28,6 +28,11 @@ public class GroceryList {
     }
 
 
+//    public  void modifyGroceryList(String newItem){
+//
+//    }
+
+
     /**
      * This method will modify an element at any particular index in the List
      * @param position at which a new replacement item is to be added
@@ -46,6 +51,27 @@ public class GroceryList {
     public void removeGroceryItem(int position){
         //String theItem = groceryList.get(position);
         groceryList.remove(position);
+    }
+
+
+    /**
+     * This method will  also remove an item from the list
+     * The only difference between the two methods is that we will remove an item by giving only String in parameter.
+     * For example you have a shopping list app in your phone and you have purchased an item and wnt to remove it
+     * So you will try to remove its name from the list
+     * Being a naive user you might not be knowing the functionality of all the methods in it
+     * So fo the user removing an item from the list does its  task ..
+     *
+     * In this method you will call above remove method
+     * And since you are calling above remove method in this class itself you can make the above method  private
+     * To hide its functionality from other classes...
+     * @param item
+     */
+    public void removeGroceryItem(String item){
+        int position = findItem(item);
+        if (position>=0){
+            removeGroceryItem(position);
+        }
     }
 
 
