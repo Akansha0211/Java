@@ -54,7 +54,7 @@ public class PhoneDirectory {
     }
 
     /**
-     * This method will return the contact name if found in the PhoneDirectory.
+     * This method will return the contact name if found in the PhoneDirectory object
      * @param contact
      * @return name of the contact...
      */
@@ -63,6 +63,28 @@ public class PhoneDirectory {
             return contact.getName();
         }
         return null;
+    }
+
+//    public Contact queryContact(String name){
+//        if (findContact(name) >= 0){
+//
+//        }
+//    }
+
+    /**
+     * This  method will find the contact using contact name
+     * @param contactName
+     * @return index of the Contact
+     */
+    public int findContact(String contactName){
+        for (int i = 0; i <this.myContacts.size() ; i++) {
+            Contact contact = this.myContacts.get(i);
+            if (contact.getName()==contactName){
+                return 1;
+            }
+
+        }
+        return -1;
     }
 
     /**
