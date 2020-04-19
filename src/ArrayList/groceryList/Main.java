@@ -80,7 +80,6 @@ public class Main {
     public static void modifyItem(){
         System.out.println("Enter current item name");
         String currentItem = scanner.nextLine();
-        scanner.nextLine();
         System.out.println("Enter new item");
         String newItem = scanner.nextLine();
        // groceryLst.modifyGroceryList();
