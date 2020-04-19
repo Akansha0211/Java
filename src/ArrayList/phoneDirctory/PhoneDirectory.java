@@ -3,11 +3,10 @@ package ArrayList.phoneDirctory;
 import java.util.ArrayList;
 
 public class PhoneDirectory {
-   // private String myNumber;
     private ArrayList<Contact> myContacts;
 
     public PhoneDirectory(){
-        //this.myNumber = myNumber;
+
         this.myContacts = new ArrayList<Contact>();
     }
 
@@ -52,6 +51,18 @@ public class PhoneDirectory {
      */
     public int findContact(Contact contact){
         return this.myContacts.indexOf(contact);
+    }
+
+    /**
+     * This method will return the contact name if found in the PhoneDirectory.
+     * @param contact
+     * @return name of the contact...
+     */
+    public String queryContact(Contact contact){
+        if (findContact(contact)>=0){
+            return contact.getName();
+        }
+        return null;
     }
 
 }
