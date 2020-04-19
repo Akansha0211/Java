@@ -1,6 +1,7 @@
 package ArrayList.groceryList;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -36,7 +37,7 @@ public class Main {
                     searchItem();
                     break;
                 case 6:
-                    //processArrayList();
+                    processArrayList();
                     break;
                 case 7:
                     quit = true;
@@ -134,6 +135,26 @@ public class Main {
             System.out.println(searchItem+" not found in list");
         }
 
+    }
+
+    /**
+     * This method will process list ....
+     * Put contents of one list into another using addAll and getGroceryList methods
+     * copy the contents of List into an Array --> by giving array the size of list and then using getter and toArray methods together...
+     */
+    public static void processArrayList(){
+        ArrayList<String> newList = new ArrayList<>();
+
+        // this method will copy all the items of Grocery List into another List i.e newList...
+        newList.addAll(groceryLst.getGroceryList());
+
+        // does the same as the above method ....
+        ArrayList<String> list = new ArrayList<>(groceryLst.getGroceryList());
+
+
+        //storing all the elements of list into an array
+        String[] myArray = new String[groceryLst.getGroceryList().size()]; // size of Array is equal to the sie of list.
+        myArray = groceryLst.getGroceryList().toArray(myArray); // copy elements of list into an array
     }
 
 
