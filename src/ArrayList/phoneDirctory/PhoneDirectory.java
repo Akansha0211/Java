@@ -26,6 +26,23 @@ public class PhoneDirectory {
         return true;
     }
 
+    /**
+     * This method will update an oldContact with a newContact if oldContact is found
+     * @param oldContact which is to be replaced.
+     * @param newContact replacement contact
+     * @return  false if that item which you want to replace i not found in the ContactList otherwise true (and update it)...
+     */
+    public boolean updateContact(Contact oldContact, Contact newContact){
+        if (findContact(oldContact)< 0){
+            System.out.println(oldContact.getName()+ " was not found");
+            return false;
+        }
+        int position = findContact(oldContact);
+        this.myContacts.set(position,newContact);
+        System.out.println(oldContact.getName()+" was replaced with "+ newContact.getName());
+        return  true;
+    }
+
 
     /**
      * Tgis method will find that a particular contact is n the the  PhoneDirectory
