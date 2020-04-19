@@ -87,15 +87,22 @@ public class Main {
     }
 
 
-    /**
-     * This method will remove an item from the grocery List.
-     * will call removeGroceryItem() method in it from the GroceryList class..
-     */
+//    /**
+//     * This method will remove an item from the grocery List.
+//     * will call removeGroceryItem() method in it from the GroceryList class..
+//     */
+//    public static void removeItem(){
+//        System.out.println("Enter the item number");
+//        int itemNo = scanner.nextInt();
+//        scanner.nextLine();
+//        groceryLst.removeGroceryItem(itemNo -1);
+//    }
+//
+
     public static void removeItem(){
-        System.out.println("Enter the item number");
-        int itemNo = scanner.nextInt();
-        scanner.nextLine();
-        groceryLst.removeGroceryItem(itemNo -1);
+        System.out.println("Enter the item to be removed");
+        String item = scanner.nextLine();
+        groceryLst.removeGroceryItem(item);
     }
 
 //    public static void searchItem(){
