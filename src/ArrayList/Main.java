@@ -1,5 +1,6 @@
 package ArrayList;
 
+import ArrayList.phoneDirctory.Contact;
 import ArrayList.phoneDirctory.PhoneDirectory;
 
 import java.util.Scanner;
@@ -19,12 +20,16 @@ public class Main {
                     contactList.printContact();
                     break;
                 case 1:
+                    //addContact();
                     break;
                 case 2:
+                    //updateContact();
                     break;
                 case 3:
+                    //removeContact();
                     break;
                 case 4:
+                    //queryContact();
                     break;
                 case 5:
                     System.out.println("Print available choice");
@@ -48,5 +53,25 @@ public class Main {
                 "4 -- query if a contact exists" +
                 "5-- to print available actions");
         System.out.println("Choose you action");
+    }
+
+    /**
+     * Thos method will add a contact in the Contact List
+     * will call addNewContact method of PhoneDirectory....
+     */
+    public static void  addNewContact(){
+        System.out.println("Enter a new contact name ");
+        String name = scanner.nextLine();
+        System.out.println("Enter  phone number");
+        String number = scanner.nextLine();
+        Contact newContact = Contact.createContact(name,number);
+        if(contactList.addNewContact(newContact)){
+            System.out.println("New contact added : name "+ name+ " phone number"+ number);
+        }
+        else {
+            System.out.println("Cannot add "+ name + " already present in the list");
+        }
+
+
     }
 }
