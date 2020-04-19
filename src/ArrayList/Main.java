@@ -16,7 +16,7 @@ public class Main {
             scanner.nextLine();
             switch (choice){
                 case 0:
-                    //contactList.printContact();
+                    contactList.printContact();
                     break;
                 case 1:
                     break;

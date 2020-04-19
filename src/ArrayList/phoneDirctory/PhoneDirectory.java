@@ -65,6 +65,17 @@ public class PhoneDirectory {
         return null;
     }
 
+    /**
+     * This method will print the contact ...
+     */
+    public void printContact(){
+        System.out.println("Contact List");
+        for (int i = 0; i <this.myContacts.size() ; i++) {
+            System.out.println((i+1)+" "+ this.myContacts.get(i).getName() + " "+ myContacts.get(i).getMobileNumber());
+        }
+    }
+
+
 
 
 }
