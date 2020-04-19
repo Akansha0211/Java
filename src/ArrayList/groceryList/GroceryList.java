@@ -44,18 +44,25 @@ public class GroceryList {
      * @param position from which element is to be removed...
      */
     public void removeGroceryItem(int position){
-        String theItem = groceryList.get(position);
+        //String theItem = groceryList.get(position);
         groceryList.remove(position);
     }
 
 
     /**
-     * This method will return the index of the item to be searched...
-     * @param searchItem
-     * @return
+     * This method will find an item in the list
+     * @param searchItem item to searched for in the List
+     * @return searched item in the list....
      */
-    public int findItem(String searchItem){
-        return groceryList.indexOf(searchItem);
+    public String findItem(String searchItem){
+      // boolean exists = groceryList.contains(searchItem);
+
+        int position = groceryList.indexOf(searchItem);
+        if(position >= 0){
+            return groceryList.get(position);
+        }
+        return null;
+
     }
 
 
