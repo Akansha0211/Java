@@ -49,20 +49,32 @@ public class GroceryList {
     }
 
 
+//    /**
+//     * This method will find an item in the list
+//     * @param searchItem item to searched for in the List
+//     * @return searched item in the list....
+//     */
+
+
+//    public String findItem(String searchItem){
+//      // boolean exists = groceryList.contains(searchItem);
+//
+//        int position = groceryList.indexOf(searchItem);
+//        if(position >= 0){
+//            return groceryList.get(position);
+//        }
+//        return null;
+//
+//    }
+
+
     /**
-     * This method will find an item in the list
-     * @param searchItem item to searched for in the List
-     * @return searched item in the list....
+     * This method will return the index number of the search item.
+     * @param searchItem item whose index is to be found
+     * @returnn  index of searchItem..
      */
-    public String findItem(String searchItem){
-      // boolean exists = groceryList.contains(searchItem);
-
-        int position = groceryList.indexOf(searchItem);
-        if(position >= 0){
-            return groceryList.get(position);
-        }
-        return null;
-
+    public int findItem(String searchItem){
+        return groceryList.indexOf(searchItem);
     }
 
 
