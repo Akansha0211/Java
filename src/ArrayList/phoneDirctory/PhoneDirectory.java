@@ -65,11 +65,18 @@ public class PhoneDirectory {
         return null;
     }
 
-//    public Contact queryContact(String name){
-//        if (findContact(name) >= 0){
-//
-//        }
-//    }
+    /**
+     * This method will find that contact exists using name of the  contact item.
+     * @param name   using which a contact  exists in the contact list.
+     * @return
+     */
+    public Contact queryContact(String name){
+        if (findContact(name) >= 0){
+            int position = findContact(name);
+            return this.myContacts.get(position);
+        }
+        return  null;
+    }
 
     /**
      * This  method will find the contact using contact name
