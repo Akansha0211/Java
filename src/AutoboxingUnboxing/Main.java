@@ -55,11 +55,14 @@ public class Main {
 
         ArrayList<Double> doubleValues = new ArrayList<Double>();
         for (double dbl = 0; dbl <=10 ; dbl+=0.5) {
-            doubleValues.add(Double.valueOf(dbl));
+            doubleValues.add(Double.valueOf(dbl));  // boxing
         }
-        for (int i = 0; i<= doubleValues.size();i++){
-            double values = doubleValues.get(i).intValue();
-            System.out.println(i+ " -->"+ values);
+        for (int i = 0; i<doubleValues.size();i++){
+//            double values = doubleValues.get(i).doubleValue(); // unboxing
+//            System.out.println(i+ " -->"+ values);
+
+
+            System.out.println(doubleValues.get(i).doubleValue());
         }
     }
 }
