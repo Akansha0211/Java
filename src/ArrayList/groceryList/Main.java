@@ -111,4 +111,21 @@ public class Main {
 //
 //    }
 
+    /**
+     * This method will search an item in te list .
+     */
+    public static void searchItem(){
+        System.out.println("Item to search for");
+        String searchItem = scanner.nextLine();
+        if (groceryLst.onFile(searchItem)){
+            System.out.println("Found "+searchItem);
+
+        }
+        else{
+            System.out.println(searchItem+" not found in list");
+        }
+
+    }
+
+
 }
