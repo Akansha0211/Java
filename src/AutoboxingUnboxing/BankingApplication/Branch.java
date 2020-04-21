@@ -22,7 +22,7 @@ public class Branch {
      * @param initialAmount
      * @return true if we can add a customer i.e when it is not already present otherwise false...
      */
-    public boolean addCustomers(String customerName, double initialAmount){
+    public boolean addNewCustomers(String customerName, double initialAmount){
         if (findCustomer(customerName)== null) {
             this.customers.add(new Customer(customerName,initialAmount));
             return true;
