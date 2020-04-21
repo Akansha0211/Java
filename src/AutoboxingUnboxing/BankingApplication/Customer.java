@@ -16,6 +16,11 @@ public class Customer {
     public ArrayList<Double> getTransactions(){
         return transactions;
     }
+
+    /**
+     * Thsi method will add a transaction in the Customer class
+     * @param amount which is to be added...
+     */
     public void addTransaction(double amount){
         this.transactions.add(amount);
     }
