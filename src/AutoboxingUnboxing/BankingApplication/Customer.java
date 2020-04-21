@@ -15,5 +15,8 @@ public class Customer {
     public ArrayList<Double> getTransactions(){
         return transactions;
     }
+    public void addTransaction(double amount){
+        this.transactions.add(amount);
+    }
 
 }
