@@ -9,5 +9,11 @@ public class Customer {
         this.name = name;
         this.transactions = new ArrayList<Double>();
     }
+    public String getName(){
+        return  name;
+    }
+    public ArrayList<Double> getTransactions(){
+        return transactions;
+    }
 
 }
