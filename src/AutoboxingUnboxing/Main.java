@@ -46,6 +46,7 @@ public class Main {
         //Autoboxing....
         Integer myIntValue = Integer.valueOf(56);
         System.out.println(myIntValue);
+
         Integer myIntvalu = 56;
         System.out.println(myIntvalu);
 
@@ -55,14 +56,15 @@ public class Main {
 
         ArrayList<Double> doubleValues = new ArrayList<Double>();
         for (double dbl = 0; dbl <=10 ; dbl+=0.5) {
-            doubleValues.add(Double.valueOf(dbl));  // boxing
+            doubleValues.add(Double.valueOf(dbl));  // boxing   doubleValues.add(dbl);
         }
         for (int i = 0; i<doubleValues.size();i++){
-//            double values = doubleValues.get(i); // unboxing
-//            System.out.println(i+ " -->"+ values);
+            double values = doubleValues.get(i).doubleValue(); // unboxing  double values = doubleValues.get(i);
+            //double values = doubleValues.get(i);
+            System.out.println(i+ " -->"+ values);
 
 
-            System.out.println(doubleValues.get(i).doubleValue());
+//            System.out.println(doubleValues.get(i).doubleValue());
         }
     }
 }
