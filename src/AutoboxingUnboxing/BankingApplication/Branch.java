@@ -15,13 +15,20 @@ public class Branch {
     public ArrayList<Customer> getCustomers(){
         return customers;
     }
-//    public boolean addCustomers(String customerName, double initialAmount){
-//        if (findCustomer(customerName)== null) {
-//            this.customers.add(new Customer(customerName,initialAmount));
-//            return true;
-//        }
-//        return false;
-//    }
+
+    /**
+     * This method will add customer to the customer Array List if a customer with that particular name is not found
+     * @param customerName which is searched for in findCustomer() method if not found than only a customer with that name is added to the CustomerList
+     * @param initialAmount
+     * @return true if we can add a customer i.e when it is not already present otherwise false...
+     */
+    public boolean addCustomers(String customerName, double initialAmount){
+        if (findCustomer(customerName)== null) {
+            this.customers.add(new Customer(customerName,initialAmount));
+            return true;
+        }
+        return false;
+    }
 
     /**
      * This method will find whether a customer with particular name is present in the customer Array list of Branch or not
