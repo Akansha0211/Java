@@ -16,6 +16,11 @@ public class Branch {
         return customers;
     }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
     /**
      * This method will add customer to the customer Array List if a customer with that particular name is not found
      * @param customerName which is searched for in findCustomer() method if not found than only a customer with that name is added to the CustomerList

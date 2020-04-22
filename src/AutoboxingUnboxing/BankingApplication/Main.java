@@ -31,7 +31,7 @@ public class Main {
         //bank.listAllCustomersInBranch("Delhi",true);
 
 
-        //System.out.println(bank.listAllCustomersInBranch("Delhi"));
+        System.out.println(bank.listAllCustomersInBranch("Delhi"));
     }
 
 
