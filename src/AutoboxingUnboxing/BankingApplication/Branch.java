@@ -46,6 +46,7 @@ public class Branch {
         return false;
     }
 
+
     /**
      * This method will find whether a customer with particular name is present in the customer Array list of Branch or not
      * @param customerName Customer with this particular name in the Array List is to be searched for
