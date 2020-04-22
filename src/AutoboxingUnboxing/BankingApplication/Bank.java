@@ -19,7 +19,7 @@ public class Bank {
     public boolean addBranch(String branchName){
         if(findBranch(branchName)== null){     // if a particular branch is not found then only add that branch name tp the list
             this.branches.add(new Branch(branchName)); // adding new branch name ot the ArrayList o branches in the Bank class
-            System.out.println("Branch added");
+            //System.out.println("Branch added");
             return true;
         }
         return false;
@@ -86,8 +86,11 @@ public class Bank {
                     }
                 }
             }
+            return true;
+
         }
-        return false;
+        else return false;
+
     }
 
     /**

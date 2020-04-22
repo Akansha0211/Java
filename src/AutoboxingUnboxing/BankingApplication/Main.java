@@ -20,17 +20,17 @@ public class Main {
     // e.g. check if exists ,or does not exists ,etc.
     //Think about where you are adding the code to perform certain actions.
     public static void main(String[] args) {
-//        Bank bank = new Bank("Reserve Bank Of India ");
-//        bank.addBranch("Delhi Branch");
-//        bank.addNewCustomerToBranch("Delhi Branch","Akansha",5000000.00);
-//        bank.addNewCustomerToBranch("Delhi Branch", "Radhe", 590000000.00);
-//        bank.addNewCustomerToBranch("Delhi Branch","Krishna", 2789100.00);
-//        bank.addBranch("Chennai Branch");
-//        bank.addNewCustomerToBranch("Chennai Branch","Shubham",124575.00);
-//        bank.addNewCustomerToBranch("Chennai Branch","Honey",23451345.00);
-//       // bank.a
-//        bank.listAllCustomerInBranch("Delhi Branch",false);
-//
+        Bank bank = new Bank("Reserve Bank Of India ");
+        bank.addBranch("Delhi Branch");
+        bank.addNewCustomerToBranch("Delhi","Akansha",5000000.00);
+        bank.addNewCustomerToBranch("Delhi", "Radhe", 590000000.00);
+        bank.addNewCustomerToBranch("Delhi","Krishna", 2789100.00);
+        bank.addBranch("Chennai");
+        bank.addNewCustomerToBranch("Chennai","Shubham",124575.00);
+        bank.addNewCustomerToBranch("Chennai","Honey",23451345.00);
+        bank.addTransactionToCustomer("Delhi","Akansha",5000000.00);
+        bank.listAllCustomerInBranch("Delhi ",true);
+
 
     }
 
