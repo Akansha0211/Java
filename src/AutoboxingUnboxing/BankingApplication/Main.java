@@ -21,17 +21,17 @@ public class Main {
     //Think about where you are adding the code to perform certain actions.
     public static void main(String[] args) {
         Bank bank = new Bank("Reserve Bank Of India ");
-        bank.addBranch("Delhi Branch");
+        bank.addBranch("Delhi");
         bank.addNewCustomerToBranch("Delhi","Akansha",5000000.00);
         bank.addNewCustomerToBranch("Delhi", "Radhe", 590000000.00);
         bank.addNewCustomerToBranch("Delhi","Krishna", 2789100.00);
-        bank.addBranch("Chennai");
-        bank.addNewCustomerToBranch("Chennai","Shubham",124575.00);
-        bank.addNewCustomerToBranch("Chennai","Honey",23451345.00);
+
         bank.addTransactionToCustomer("Delhi","Akansha",5000000.00);
-        bank.listAllCustomerInBranch("Delhi ",true);
+        bank.addTransactionToCustomer("Delhi","Radhe",590000000.00);
+        //bank.listAllCustomersInBranch("Delhi",true);
 
 
+        //System.out.println(bank.listAllCustomersInBranch("Delhi"));
     }
 
 
