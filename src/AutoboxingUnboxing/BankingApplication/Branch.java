@@ -31,6 +31,22 @@ public class Branch {
     }
 
     /**
+     * This method will add transaction in the customer record i.e in the Customer class
+     * Using addCustomerTransaction method .
+     * @param customerName which if found then transaction is added to that Customer.
+     * @param amount which is to be added in the Transaction Array List of Customer
+     * @return
+     */
+    public boolean addCustomerTransaction(String customerName, double amount){
+        Customer existingCustomer = findCustomer(customerName);
+        if (existingCustomer!= null){
+            existingCustomer.addTransaction(amount);
+            return true;
+        }
+        return false;
+    }
+
+    /**
      * This method will find whether a customer with particular name is present in the customer Array list of Branch or not
      * @param customerName Customer with this particular name in the Array List is to be searched for
      * @return Customer
