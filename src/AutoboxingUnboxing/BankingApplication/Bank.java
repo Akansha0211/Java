@@ -17,11 +17,18 @@ public class Bank {
      * @return true if you can add a branch to the ArrayList otherwise return false
      */
     public boolean addBranch(String branchName){
-        if(findBranch(branchName)== null){
-            this.branches.add(new Branch(branchName));
+        if(findBranch(branchName)== null){     // if a particular branch is not found then only add that branch name tp the list
+            this.branches.add(new Branch(branchName)); // adding new branch name ot the ArrayList o branches in the Bank class
             return true;
         }
         return false;
+    }
+
+    public boolean addNewCustomerToBranch(String branchName, String customerName, double initialAmount){
+       if (findBranch(branchName) != null){
+           return findBranch(branchName).addNewCustomers(customerName,initialAmount);
+       }
+       return false;
     }
 
     /**
@@ -31,7 +38,7 @@ public class Bank {
      */
     public Branch findBranch(String branchName){
         for (int i = 0; i <branches.size() ; i++) {
-            if (this.branches.get(i).getName()==branchName){
+            if (this.branches.get(i).getName().equals(branchName)){    // Adding a new Customer to the Branch Name  ( for this you need Array List of Branches present in Customer Class)
                 return this.branches.get(i);
             }
         }
