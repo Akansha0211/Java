@@ -11,13 +11,18 @@ public class Bank {
         this.branches = new ArrayList<Branch>();
     }
 
-//    public boolean addBranch(String branchName){
-//        if(findBranch()== null){
-//            this.branches.add(new Branch(branchName));
-//            return true;
-//        }
-//        return false;
-//    }
+    /**
+     * This method will add a branch to the ArrayList of Branches (only if branch with that particular name is not found)
+     * @param branchName which is to be added to a Array list of branches
+     * @return true if you can add a branch to the ArrayList otherwise return false
+     */
+    public boolean addBranch(String branchName){
+        if(findBranch(branchName)== null){
+            this.branches.add(new Branch(branchName));
+            return true;
+        }
+        return false;
+    }
 
     /**
      * This method will find a branch with that particular name
