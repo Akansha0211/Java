@@ -19,6 +19,7 @@ public class Bank {
     public boolean addBranch(String branchName){
         if(findBranch(branchName)== null){     // if a particular branch is not found then only add that branch name tp the list
             this.branches.add(new Branch(branchName)); // adding new branch name ot the ArrayList o branches in the Bank class
+            System.out.println("Branch added");
             return true;
         }
         return false;
@@ -88,19 +89,21 @@ public class Bank {
         }
         return false;
     }
-//    public boolean showTransactions(String branchName , boolean show ){
-//        Branch branch = findBranch(branchName);
-//        if (branch!= null){
-//            ArrayList<Customer> branchCustomers = branch.getCustomers();
-//            for (int i = 0; i < branchCustomers.size(); i++) {
-//                Customer customer = branchCustomers.get(i);
-//                System.out.println("Customer Name :"+ customer.getName());
-//                if (show){
-//                    ArrayList<Double> transactionOfCustomerOfBranch = branchCustomers.get
-//                }
-//            }
-//        }
-//    }
+
+    /**
+     * This method will add transaction to the Customer
+     * @param branchName Customer is to be found in this branch ,Branch if found then add the transaction amount
+     * @param customerName  To which Transaction is to be made.
+     * @param amount it is the amount of transaction.
+     * @return false if Branch not found...
+     */
+    public boolean addTransactionToCustomer(String branchName, String customerName, double amount){
+        Branch branch = findBranch(branchName);
+        if (branch!= null){
+            return branch.addCustomerTransaction(customerName,amount);
+        }
+        return  false;
+    }
 
 
 
