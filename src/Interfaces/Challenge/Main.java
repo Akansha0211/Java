@@ -33,14 +33,17 @@ public class Main {
 
 
 
-        Player playerAK = new Player("Akansha",10,15);
+        //Player playerAK = new Player("Akansha",10,15);
+        iSaveable playerAK = new Player("Akansha",20,20);
         System.out.println(playerAK.toString());
         saveObject(playerAK);
-        playerAK.setScore(20);
-        playerAK.setWeapon("Flare Gun");
+        //playerAK.setScore(20);
+        ((Player)playerAK).setScore(20);  // cast to Player class
+        ((Player)playerAK).setWeapon("Flare Gun");
         saveObject(playerAK);
         loadObject(playerAK);
         System.out.println(playerAK);
+        //System.out.println(playerAK.getStrength());
     }
 
     /**
