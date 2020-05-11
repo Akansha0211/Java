@@ -59,9 +59,20 @@ public class Player implements iSaveable {
                 '}';
     }
 
+
+    /**
+     * This method will add object parameters to the List
+     * @return the List....
+     */
     @Override
     public List<String> write() {
-        return null;
+        List<String> values = new ArrayList<>();
+        values.add(0,this.playerName);
+        values.add(1,"" + this.score);
+        values.add(2,"" + this.strength);
+        values.add(3,this.weapon);
+
+        return values;
     }
 
     @Override
