@@ -29,6 +29,11 @@ public class Main {
          * from the file - this allows you to type as many values as your class requires , and returns an ArrayList .
          * There is a whole Java section to be learnt where we will be using files, etc...
          */
+
+
+
+
+
     }
 
     /**
@@ -62,11 +67,27 @@ public class Main {
         return values;
     }
 
+    /**
+     *  create saveObject() method that can save Object of class implementing iSaveable interface.
+     * @param objectToSave
+     */
     public static void saveObject(iSaveable objectToSave){
         for (int i = 0; i < objectToSave.write().size(); i++) {
             System.out.println("Saving"+objectToSave.write().get(i)+"to the storage device");
         }
     }
+
+
+    /**
+     * This method will load the ArrayList values
+     * @param objectToLoad
+     */
+    public static void loadObject(iSaveable objectToLoad){
+        ArrayList<String> values = readValues();
+        System.out.println(values);
+    }
+
+
 
 
 }
