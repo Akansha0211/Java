@@ -61,4 +61,12 @@ public class Main {
         }
         return values;
     }
+
+    public static void saveObject(iSaveable objectToSave){
+        for (int i = 0; i < objectToSave.write().size(); i++) {
+            System.out.println("Saving"+objectToSave.write().get(i)+"to the storage device");
+        }
+    }
+
+
 }
