@@ -33,7 +33,14 @@ public class Main {
 
 
 
-
+        Player playerAK = new Player("Akansha",10,15);
+        System.out.println(playerAK.toString());
+        saveObject(playerAK);
+        playerAK.setScore(20);
+        playerAK.setWeapon("Flare Gun");
+        saveObject(playerAK);
+        loadObject(playerAK);
+        System.out.println(playerAK);
     }
 
     /**
