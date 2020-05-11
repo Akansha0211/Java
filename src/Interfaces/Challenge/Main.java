@@ -80,7 +80,7 @@ public class Main {
      */
     public static void saveObject(iSaveable objectToSave){
         for (int i = 0; i < objectToSave.write().size(); i++) {
-            System.out.println("Saving"+objectToSave.write().get(i)+"to the storage device");
+            System.out.println("Saving"+objectToSave.write().get(i)+" to the storage device");
         }
     }
 
@@ -91,7 +91,8 @@ public class Main {
      */
     public static void loadObject(iSaveable objectToLoad){
         ArrayList<String> values = readValues();
-        System.out.println(values);
+        //System.out.println(values);
+        objectToLoad.read(values);
     }
 
 
