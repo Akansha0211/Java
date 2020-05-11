@@ -1,6 +1,7 @@
 package Interfaces.Challenge;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Create a single interface  ( name : Saveable)
@@ -11,6 +12,6 @@ import java.util.ArrayList;
  *   and other to populate the object's fields from an ArrayList(parameter)...
  */
 public interface iSaveable {
-    ArrayList<String> write();
-    void read(ArrayList<String> savedValues);
+    List<String> write();  // populate ArrayList
+    void read(List<String> savedValues);
 }

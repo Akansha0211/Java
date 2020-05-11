@@ -1,6 +1,7 @@
 package Interfaces.Challenge;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Player implements iSaveable {
     String playerName;
@@ -49,12 +50,22 @@ public class Player implements iSaveable {
     }
 
     @Override
-    public ArrayList<String> write() {
+    public String toString() {
+        return "Player{" +
+                "playerName='" + playerName + '\'' +
+                ", score=" + score +
+                ", strength=" + strength +
+                ", weapon='" + weapon + '\'' +
+                '}';
+    }
+
+    @Override
+    public List<String> write() {
         return null;
     }
 
     @Override
-    public void read(ArrayList<String> savedValues) {
+    public void read(List<String> savedValues) {
 
     }
 }
