@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class GearBox {
     private ArrayList<Gear> gears;
     private int maxGears;
-    private int gearNumber = 0;
+    private int currentGear = 0;  // to avoid shadow declaration in inner class variables
 
     public GearBox(int maxGears) {
         this.maxGears = maxGears;
