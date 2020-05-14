@@ -51,6 +51,14 @@ public class GearBox {
         }
     }
 
+//    public double Speed(int revs){
+//        if (clutchIsIn){
+//            System.out.println("Scream");
+//            return 0.0;
+//        }
+//        return revs * gears.get(currentGear).getRatio();
+//    }
+
     /**
      * Nested classes are used when inner classes makes sense with outer classes here Gear makes sense only in GearBox
      * Inner classes have access to all the methods and fields of outer classes .
@@ -71,6 +79,10 @@ public class GearBox {
 
         public double driveSpeed(int revs){
             return revs *(this.ratio);
+        }
+
+        public double getRatio() {
+            return ratio;
         }
     }
 }
