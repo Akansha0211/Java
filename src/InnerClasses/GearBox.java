@@ -18,8 +18,23 @@ public class GearBox {
 
     }
 
+    /**
+     * This method is operate clutch
+     * @param in true if clutch is set otherwise false
+     */
     public void operateClutch(boolean in){
         this.clutchIsIn = in;
+    }
+
+    /**
+     * This method will add gear to the ArrayList of gears
+     * @param number which is to be added to the ArrayList of gears (eg 5th Gear or so..)
+     * @param ratio It is basically the torque applied on the Gear
+     */
+    public void addGear(int number , double ratio){
+        if((number>0)&& (number<=maxGears)){
+            this.gears.add(new Gear(number,ratio));
+        }
     }
 
     /**
