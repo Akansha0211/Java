@@ -38,6 +38,20 @@ public class GearBox {
     }
 
     /**
+     * This method will change the current gear which we are in
+     * @param newGear  the gear in which we want to go....
+     */
+    public void changeGear(int newGear){
+        if((newGear>=0)&&(newGear<this.gears.size())&& this.clutchIsIn){
+            this.currentGear = newGear;
+            System.out.println("Gear" + newGear + "selected");
+        }else {
+            System.out.println("No Gear selected.There might be some problem!!");
+            this.currentGear = 0;
+        }
+    }
+
+    /**
      * Nested classes are used when inner classes makes sense with outer classes here Gear makes sense only in GearBox
      * Inner classes have access to all the methods and fields of outer classes .
      * If we use same name of variable as that in the outer classes :
