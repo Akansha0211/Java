@@ -6,6 +6,7 @@ public class GearBox {
     private ArrayList<Gear> gears;
     private int maxGears;
     private int currentGear = 0;  // to avoid shadow declaration in inner class variables
+    private boolean clutchIsIn;
 
     public GearBox(int maxGears) {
         this.maxGears = maxGears;
@@ -15,6 +16,10 @@ public class GearBox {
         Gear neutral =  new Gear(0,0.0);
         this.gears.add(neutral);
 
+    }
+
+    public void operateClutch(boolean in){
+        this.clutchIsIn = in;
     }
 
     /**
