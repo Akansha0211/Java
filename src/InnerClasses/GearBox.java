@@ -17,6 +17,15 @@ public class GearBox {
 
     }
 
+    /**
+     * Nested classes are used when inner classes makes sense with outer classes here Gear makes sense only in GearBox
+     * Inner classes have access to all the methods and fields of outer classes .
+     * If we use same name of variable as that in the outer classes :
+     * Like here gearNumber if we use this.gearNumber then we refer to the variable inside the inner class.
+     * If we have to refer the variable in the outer class we need to use GearBox.this.gearNumber to refer to the outer class variables...
+     *
+     * There is a concept shadow the declaration of outer class ---> use same name of variable in  innerClass as that in the  outerClass....
+     */
     public class Gear{
         private int gearNumber;
         private double ratio;
