@@ -16,6 +16,11 @@ public class GearBox {
         Gear neutral =  new Gear(0,0.0);
         this.gears.add(neutral);
 
+
+        for (int i = 0; i < maxGears; i++) {
+            addGear(i,i*5.3);
+        }
+
     }
 
     /**
