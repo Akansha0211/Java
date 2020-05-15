@@ -10,5 +10,12 @@ public class Main {
          * Create your button class and attach a listener to it
          * Demonstrate Local classes....
          */
+
+        class ClickOnListener implements Button.OnClickListener{
+            @Override
+            public void onClick(String title) {
+                System.out.println(title + "was clicked");
+            }
+        }
     }
 }
