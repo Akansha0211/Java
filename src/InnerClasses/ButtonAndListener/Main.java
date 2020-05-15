@@ -23,5 +23,21 @@ public class Main {
         }
         btnPrint.setOnClickListener(new ClickOnListener());
         //Since we have no GUI present now so we be using keyboard to simulate the output...
+        listen();
+    }
+
+    public static void listen(){
+        boolean quit = false;
+        while (!quit){
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+            switch (choice){
+                case 0:
+                    quit = true;
+                    break;
+                case 1:
+                    btnPrint.onClick();
+            }
+        }
     }
 }
