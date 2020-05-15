@@ -1,16 +1,21 @@
 package InnerClasses.ButtonAndListener;
 
 import java.util.Scanner;
-
+/**
+ *
+ * Task:
+ * Create your button class and attach a listener to it
+ * Demonstrate Local classes....
+ */
 public class Main {
     private static Scanner  scanner= new Scanner(System.in);
     private static  Button btnPrint = new Button("Print");
     public static void main(String[] args) {
-        /**
-         * Create your button class and attach a listener to it
-         * Demonstrate Local classes....
-         */
 
+        /**
+         * Local class created that implement OnClickListener interface
+         * And assign an instance of it to the Button class...
+         */
         class ClickOnListener implements Button.OnClickListener{
             public ClickOnListener() {
                 System.out.println("I've been attached");
@@ -18,7 +23,7 @@ public class Main {
 
             @Override
             public void onClick(String title) {
-                System.out.println(title + "was clicked");
+                System.out.println(title + " was clicked");
             }
         }
         btnPrint.setOnClickListener(new ClickOnListener());
