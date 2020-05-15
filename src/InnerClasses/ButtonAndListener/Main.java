@@ -21,5 +21,7 @@ public class Main {
                 System.out.println(title + "was clicked");
             }
         }
+        btnPrint.setOnClickListener(new ClickOnListener());
+        //Since we have no GUI present now so we be using keyboard to simulate the output...
     }
 }
