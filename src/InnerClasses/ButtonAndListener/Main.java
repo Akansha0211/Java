@@ -12,6 +12,10 @@ public class Main {
          */
 
         class ClickOnListener implements Button.OnClickListener{
+            public ClickOnListener() {
+                System.out.println("I've been attached");
+            }
+
             @Override
             public void onClick(String title) {
                 System.out.println(title + "was clicked");
