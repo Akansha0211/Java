@@ -73,7 +73,7 @@ public class GearBox {
      *
      * There is a concept shadow the declaration of outer class ---> use same name of variable in  innerClass as that in the  outerClass....
      */
-    public class Gear{
+    private class Gear{
         private int gearNumber;
         private double ratio;
 
