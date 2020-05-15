@@ -19,6 +19,7 @@ public class Main {
 
         maruti.operateClutch(true);
         maruti.changeGear(1);
+        maruti.operateClutch(false);
         System.out.println(maruti.Speed(1000));
         maruti.changeGear(2);
         System.out.println(maruti.Speed(2000));
