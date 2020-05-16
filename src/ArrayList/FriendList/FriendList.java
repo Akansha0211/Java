@@ -21,7 +21,8 @@ public class FriendList implements iFriendList {
     }
 
     @Override
-    public void removeFromFriendList() {
+    public void removeFromFriendList(int position) {
+        friendList.remove(position);
 
     }
 
