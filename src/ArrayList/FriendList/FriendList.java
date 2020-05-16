@@ -11,8 +11,13 @@ public class FriendList implements iFriendList {
     }
 
     @Override
-    public boolean acceptFriendRequest() {
-        return false;
+    public boolean acceptFriendRequest(Contact contact) {
+        if (findFriend(contact)>=0){
+            System.out.println("Hey your this person s already in your friendList");
+            return false;
+        }
+        friendList.add(contact);
+        return true;
     }
 
     @Override
@@ -21,7 +26,7 @@ public class FriendList implements iFriendList {
     }
 
     @Override
-    public boolean findFriend() {
-        return false;
+    public int findFriend(Contact contact) {
+        return this.friendList.indexOf(contact);
     }
 }
