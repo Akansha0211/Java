@@ -35,6 +35,7 @@ public class FriendList implements iFriendList {
         for (int i = 0; i <friendList.size() ; i++) {
             Contact contact = this.friendList.get(i);
             if (contact.getName()==contactName){
+                System.out.println("Found contact by name "+ contactName);
                 return true;
             }
         }
