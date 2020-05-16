@@ -7,4 +7,5 @@ public interface iFriendList {
       void removeFromFriendList();
       //This method will search a friend in your friendList ....
       int findFriend(Contact contact);
+      boolean findFriend(String contactName);
 }
