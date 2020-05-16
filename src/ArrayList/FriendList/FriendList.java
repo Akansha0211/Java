@@ -21,17 +21,7 @@ public class FriendList implements iFriendList {
     }
 
     @Override
-    public void modifyMyProfile() {
-
-    }
-
-    @Override
-    public void viewFriendList() {
-
-    }
-
-    @Override
-    public boolean findFriendInList() {
+    public boolean findFriend() {
         return false;
     }
 }
