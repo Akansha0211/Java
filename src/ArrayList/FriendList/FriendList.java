@@ -20,9 +20,23 @@ public class FriendList implements iFriendList {
         return true;
     }
 
+    /**
+     * This method will remove contact by its position
+     * @param position
+     */
     @Override
     public void removeFromFriendList(int position) {
         friendList.remove(position);
+
+    }
+
+    @Override
+    public void removeFromFriendList(String contactName) {
+        int position = findFriend(contactName);
+       if (position>=0){
+           removeFromFriendList(position);
+
+       }
 
     }
 
@@ -32,14 +46,14 @@ public class FriendList implements iFriendList {
     }
 
     @Override
-    public boolean findFriend(String contactName) {
+    public int findFriend(String contactName) {
         for (int i = 0; i <friendList.size() ; i++) {
             Contact contact = this.friendList.get(i);
             if (contact.getName()==contactName){
                 System.out.println("Found contact by name "+ contactName);
-                return true;
+                return 1;
             }
         }
-        return false;
+        return -1;
     }
 }
