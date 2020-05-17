@@ -26,5 +26,10 @@ public class Main {
 
         //Now Bird is Abstract and cannot be instantiated...
         //so create a Parrot class
+
+        Parrot parrot = new Parrot("parrot");
+        parrot.breath();
+        parrot.eat();
+        parrot.fly();
     }
 }
