@@ -1,4 +1,12 @@
 package AbstractClasses;
 
-public class Penguin {
+public class Penguin extends Bird {
+    public Penguin(String name) {
+        super(name);
+    }
+
+    @Override
+    public void fly() {
+        System.out.println("I am not very good at that , can I go or swim instead");
+    }
 }
