@@ -6,6 +6,12 @@ public class Main {
     //Focused on what needs to be done rather than how it is to be done
     //Interfaces are abstract and actual implementation are left to teh classes that implement the interfaces
     //Interfaces can't be instantiated . Classes that implements the interfaces can be instantiated...
+    // Interfaces can have variables but are static as they can't be instantiated.
+
+    //Methods of interfaces are public whereas methods of abstract class can have any visibility
+
+    //Abstract acn have have method with implementation like getName() method
+    // Whereas all methods of interface do not have implementation
 
 
     //Java also provide abstract classes and these are the methods that provide definition but no implementation  to those methods
