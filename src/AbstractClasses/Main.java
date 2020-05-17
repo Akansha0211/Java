@@ -10,4 +10,11 @@ public class Main {
 
     //Java also provide abstract classes and these are the methods that provide definition but no implementation  to those methods
     //Implementation is left to the class that inherits an abstract class.
+
+    public static void main(String[] args) {
+        //Instantiate Dog class...
+        Dog dog = new Dog("Husky");
+        dog.breath();
+        dog.eat();
+    }
 }
