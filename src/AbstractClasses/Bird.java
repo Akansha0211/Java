@@ -1,6 +1,7 @@
 package AbstractClasses;
 
 //Now making Bird class also Abstract
+// abstract class itself that inherits from another abstract class
 public abstract class Bird extends Animal {
     public Bird(String name) {
         super(name);

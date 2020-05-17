@@ -23,5 +23,8 @@ public class Main {
 
         //Since not all birds can fly well so implementing fly() method in Bird class will not be a good idea
         //So we will create an Abstract Bird class that extends Animal and also has an abstract fly() method that individual Bird objects can implement
+
+        //Now Bird is Abstract and cannot be instantiated...
+        //so create a Parrot class
     }
 }
