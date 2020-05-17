@@ -16,5 +16,12 @@ public class Main {
         Dog dog = new Dog("Husky");
         dog.breath();
         dog.eat();
+
+//        Bird bird = new Bird("parrot");
+//        bird.breath();
+//        bird.eat();
+
+        //Since not all birds can fly well so implementing fly() method in Bird class will not be a good idea
+        //So we will create an Abstract Bird class that extends Animal and also has an abstract fly() method that individual Bird objects can implement
     }
 }

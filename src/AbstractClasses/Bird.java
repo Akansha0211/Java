@@ -1,6 +1,7 @@
 package AbstractClasses;
 
-public class Bird extends Animal {
+//Now making Bird class also Abstract
+public abstract class Bird extends Animal {
     public Bird(String name) {
         super(name);
     }
@@ -14,4 +15,6 @@ public class Bird extends Animal {
     public void breath() {
         System.out.println("Breath in breath out , repeat");
     }
+
+    public abstract void fly(); // creating an Abstract method that individual Bird objects could occupy
 }
