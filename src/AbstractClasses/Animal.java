@@ -1,5 +1,10 @@
 package AbstractClasses;
 
+/**
+ * It is an abstract class .
+ * One of the difference between interface and abstract class is that Abstract class also has data-fields and consructor in it
+ * Whereas interface only has methods to be implemented i.e method definition...
+ */
 public abstract class Animal {
     private String name;
 
