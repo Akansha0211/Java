@@ -32,6 +32,11 @@ public class Main {
         //items.add("Akansha"); // will give error here itself
 
     }
+    public static void printArrayList(ArrayList<Integer> n){
+        for (Object i : n){
+            System.out.println((Integer)i*2);
+        }
+    }
 
 
 
