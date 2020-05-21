@@ -62,4 +62,12 @@ public class Team {
             opponent.matchResults(null,theirScore,ourScore);
         }
     }
+
+    /**
+     * This method is just a way of ranking you can implement
+     * @return
+     */
+    public int ranking(){
+        return (won*2)+tied;
+    }
 }
