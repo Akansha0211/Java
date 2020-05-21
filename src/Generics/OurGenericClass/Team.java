@@ -2,7 +2,7 @@ package Generics.OurGenericClass;
 
 import java.util.ArrayList;
 
-public class Team {
+public class Team<T> {
     private String name;
 
     int played = 0;
@@ -10,7 +10,7 @@ public class Team {
     int lost = 0;
     int tied = 0;
 
-    private ArrayList<Player> members = new ArrayList<>();
+    private ArrayList<T> members = new ArrayList<>();
     public Team(String name) {
         this.name = name;
     }
@@ -24,13 +24,15 @@ public class Team {
      * @param player
      * @return true if a palyer acan be added or otherwise false
      */
-    public boolean addPlayer(Player player){
+    public boolean addPlayer(T player){
         if (members.contains(player)){
-            System.out.println(player.getName()+" is already in the team");
+            System.out.println(((Player)player).getName()+" is already in the team");
             return false;
         }else {
             members.add(player);
-            System.out.println(player.getName()+" picked for the team "+this.name);  //this.name is the actual team name
+//            System.out.println(player.getName()+" picked for the team "+this.name);  //this.name is the actual team name
+            //Above code is giving error on adding T generic type to Team class
+            System.out.println(((Player)player).getName()+" picked for the team "+this.name);  //this.name is the actual team name
             return true;
         }
     }
