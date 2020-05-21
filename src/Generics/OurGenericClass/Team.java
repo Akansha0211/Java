@@ -34,4 +34,12 @@ public class Team {
             return true;
         }
     }
+
+    /**
+     * This method will give return number of members in  a team
+     * @return
+     */
+    public int numOfPlayers(){
+        return this.members.size();
+    }
 }
