@@ -30,10 +30,11 @@ public class Main {
         items.add(1);  //Autoboxing --> primitive to Integer
         items.add(2);
         //items.add("Akansha"); // will give error here itself
+        printArrayList(items);
 
     }
     public static void printArrayList(ArrayList<Integer> n){
-        for (Object i : n){
+        for (int i : n){ // Unboxing Integer -->int primitive type
             System.out.println((Integer)i*2);
         }
     }
