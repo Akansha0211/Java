@@ -42,4 +42,24 @@ public class Team {
     public int numOfPlayers(){
         return this.members.size();
     }
+
+    /**
+     * This method will give the matchResults of your team and your opponent
+     * @param opponent
+     * @param ourScore
+     * @param theirScore
+     */
+    public void matchResults(Team opponent, int ourScore , int theirScore){
+        if (ourScore>theirScore){
+            won++;
+        }else if (ourScore==theirScore){
+            tied++;
+        }else {
+            lost++;
+        }
+        played++;
+        if (opponent!=null){
+            opponent.matchResults(null,theirScore,ourScore);
+        }
+    }
 }
