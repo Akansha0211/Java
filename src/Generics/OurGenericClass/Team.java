@@ -2,7 +2,7 @@ package Generics.OurGenericClass;
 
 import java.util.ArrayList;
 
-public class Team<T> {
+public class Team<T extends Player> {
     private String name;
 
     int played = 0;
@@ -26,7 +26,9 @@ public class Team<T> {
      */
     public boolean addPlayer(T player){
         if (members.contains(player)){
-            System.out.println(((Player)player).getName()+" is already in the team");
+//            System.out.println(((Player)player).getName()+" is already in the team");
+                //No need to cast to Player as done above after T extends Player
+            System.out.println(player.getName()+" is already in the team");
             return false;
         }else {
             members.add(player);
@@ -51,16 +53,21 @@ public class Team<T> {
      * @param ourScore
      * @param theirScore
      */
-    public void matchResults(Team opponent, int ourScore , int theirScore){
+    public void matchResults(Team<T> opponent, int ourScore , int theirScore){
+        String message;
         if (ourScore>theirScore){
             won++;
+            message = " best ";
         }else if (ourScore==theirScore){
             tied++;
+            message = " drew with ";
         }else {
             lost++;
+            message = " lost to ";
         }
         played++;
         if (opponent!=null){
+            System.out.println(this.getName()+ message + opponent.getName());
             opponent.matchResults(null,theirScore,ourScore);
         }
     }
