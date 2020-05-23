@@ -19,5 +19,10 @@ public class Main {
         for (int i = 0; i < items.size(); i++) {
             System.out.println(i+ ":"+ items.get(i));
         }
+
+        items.add(1,5);
+        for (int i = 0; i <items.size() ; i++) {
+            System.out.println(i+":"+ items.get(i));
+        }
     }
 }
