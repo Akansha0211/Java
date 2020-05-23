@@ -17,6 +17,28 @@ public class Demo {
 
         printList(placesToVisit);
 
+        placesToVisit.add(1,"Alice Springs");
+        printList(placesToVisit);
+
+        //OUTPUT TILL NOW :
+//        Now visiting Sydney
+//        Now visiting Melbourne
+//        Now visiting Brisbane
+//        Now visiting Perth
+//        Now visiting Canberra
+//        Now visiting Adelaide
+//        Now visiting Darwin
+//                =================================
+//        Now visiting Sydney
+//        Now visiting Alice Springs
+//        Now visiting Melbourne
+//        Now visiting Brisbane
+//        Now visiting Perth
+//        Now visiting Canberra
+//        Now visiting Adelaide
+//        Now visiting Darwin
+//                =================================
+
     }
 
     /**
