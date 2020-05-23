@@ -187,6 +187,7 @@ public class Demo {
     private static void visit(LinkedList citiesList){
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
+        boolean goingForward = false;  // for specifying the direction...
 
         ListIterator<String> listIterator = citiesList.listIterator();
         if (citiesList.isEmpty()){
@@ -205,6 +206,11 @@ public class Demo {
                     quit = false;
                     break;
                 case 1:
+                    if (!goingForward){
+                        if (listIterator.hasNext()){
+                            listIterator.next();
+                        }goingForward = true;
+                    }
                     if (listIterator.hasNext()){
                         System.out.println("Now visiting "+ listIterator.next());
 
@@ -213,6 +219,12 @@ public class Demo {
                     }
                     break;
                 case 2:
+                    if (goingForward){
+                        if (listIterator.hasPrevious()){
+                            listIterator.previous();
+                        }
+                        goingForward = false;
+                    }
                     if (listIterator.hasPrevious()){
                         System.out.println("Now visiting "+ listIterator.previous());
                     }else {
