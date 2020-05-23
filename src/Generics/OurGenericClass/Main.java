@@ -54,7 +54,12 @@ public class Main {
 
         // SO TO CORRECT ABOVE PROBLEM
         // Now add type parameter in matchResults method to Team opponent parameter
+
         // now we will get error in line no 45 i.e footballTeam.matchResults(baseballTeam,1,1);
+
+        System.out.println("Rankings");
+        System.out.println(footballTeam.getName()+" : "+ footballTeam.ranking());
+        System.out.println(footballTeam2.getName()+": "+ footballTeam2.ranking());
 
 
 
