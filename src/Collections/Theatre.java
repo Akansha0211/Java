@@ -13,6 +13,7 @@ public class Theatre {
         for (char row ='A'; row<= lastRow;row++){
             for (int seatNum =1 ; seatNum<=seatPerRows;seatNum++){
                 Seat seat = new Seat(row + String.format("%02d",seatNum));
+                seats.add(seat);
             }
         }
     }
