@@ -36,7 +36,7 @@ public class Theatre {
         Seat requestedSeat = new Seat(seatNumber);
         int foundSeat = Collections.binarySearch(seats,requestedSeat,null);
         if (foundSeat>=0){
-            System.out.println(".");
+            System.out.print(".");
             return seats.get(foundSeat).reserve();
         }else {
             System.out.println("There is no seat "+ seatNumber);
