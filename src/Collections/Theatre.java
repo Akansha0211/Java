@@ -19,8 +19,14 @@ public class Theatre {
     public String getTheatreName(){
         return theatreName;
     }
-    public List<Seat> getSeat(){
-        return seats;
+//    public List<Seat> getSeat(){
+//        return seats;
+//    }
+
+    public void getSeat(){
+        for (Seat seat: seats){
+            System.out.println(seat.getSeatNumber());
+        }
     }
 
     public boolean reserveSeat(String seatNumber){
