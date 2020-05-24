@@ -23,9 +23,19 @@ public class Theatre {
         return seats;
     }
 
-//    public boolean reserveSeat(String seatNumber){
-//        Seat requestedSeat
-//    }
+    public boolean reserveSeat(String seatNumber){
+        Seat requestedSeat = null;
+        for (Seat seat : seats){
+            if (seat.getSeatNumber().equals(seatNumber) ){
+                requestedSeat = seat;
+            }
+        }
+        if (requestedSeat== null){
+            System.out.println("There is no seat with seat number"+ seatNumber);
+            return false;
+        }
+        return requestedSeat.reserve();
+    }
 
     private class Seat{
         private String seatNumber;
@@ -34,6 +44,31 @@ public class Theatre {
         public Seat(String seatNumber){
             this.seatNumber = seatNumber;
         }
+        public boolean reserve(){
+            if (!this.reserved){
+                this.reserved = true;
+                System.out.println("Seat"+ seatNumber+ "reserved");
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        public boolean cancel(){
+            if (this.reserved){
+                this.reserved = false;
+                System.out.println("Resrvaton cancelled for seat number : "+seatNumber);
+                return false;
+            }
+            else {
+                return false;
+            }
+        }
+        public String getSeatNumber(){
+            return seatNumber;
+        }
+
     }
+
 
 }
