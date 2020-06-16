@@ -117,8 +117,8 @@ public class Basics {
         htmlText.append("<p>This is another paragraph</p>");
         htmlText.append("<h2>Summary</h2>");
         htmlText.append("<p>There is summary</p> ");
-        String h2Pattern = "<h2>";
-        Pattern pattern = Pattern.compile(h2Pattern);
+        String h2Pattern = ".*<h2>.*";  // regex string
+        Pattern pattern = Pattern.compile(h2Pattern); // create pattern instance which will be used to create matcher instance
         Matcher matcher = pattern.matcher(htmlText);
         System.out.println(matcher.matches());
 
