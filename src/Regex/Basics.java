@@ -1,5 +1,8 @@
 package Regex;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Basics {
     public static void main(String[] args) {
 //        String string ="I   am String, Yes I am";
@@ -88,6 +91,37 @@ public class Basics {
         //output:
 //        XIX XhaveX XblanksX XandX 	 XaX XtabX XandX XalsoX
 //        XaX XnewX XlineX
+
+        //Quantifiers
+        //quantifiers specify how often an element occurs in a regex.
+        String thirdAplhanumeric = "abcDeeeF12Ghhiiiijkl99z";
+        System.out.println(thirdAplhanumeric.replaceAll("^abcDe{3}","YYY"));
+        System.out.println(thirdAplhanumeric.replaceAll("^abcDe+","YYY"));
+        System.out.println(thirdAplhanumeric.replaceAll("^abcDe*","YYY"));
+        //now you can remove e and check the above * as well you will get the same result
+
+        //will replace e's in between 2 to 5 i.e occuring 2 to 5 times
+        //  will replace only first occurrence
+        System.out.println(thirdAplhanumeric.replaceAll("^abcDe{2,5}","YYY"));
+        //will replace h followed by any number of i and atleast one j
+        System.out.println(thirdAplhanumeric.replaceAll("h+i*j","Y"));  //output :abcDeeeF12GYkl99z
+
+
+       //pattern.compile method --> compile regex into a pattern.Used when we want to work  with methods in the matcher class .
+        //matches work with classes that implement char sequence interface with string , string buffer , and other classes  that implement that interface.
+        //Generally  we use matcher when we want to find multiple occurrences of pattern or we want same pattern with multiple sequences.
+
+        StringBuilder htmlText = new StringBuilder("<h1>My heading </h1>");
+        htmlText.append("<h2>Sub heading </h2>");
+        htmlText.append("<p>This is paragraph about something </p>");
+        htmlText.append("<p>This is another paragraph</p>");
+        htmlText.append("<h2>Summary</h2>");
+        htmlText.append("<p>There is summary</p> ");
+        String h2Pattern = "<h2>";
+        Pattern pattern = Pattern.compile(h2Pattern);
+        Matcher matcher = pattern.matcher(htmlText);
+        System.out.println(matcher.matches());
+
 
 
 
