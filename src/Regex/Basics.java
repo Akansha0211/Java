@@ -117,12 +117,122 @@ public class Basics {
         htmlText.append("<p>This is another paragraph</p>");
         htmlText.append("<h2>Summary</h2>");
         htmlText.append("<p>There is summary</p> ");
-        String h2Pattern = ".*<h2>.*";  // regex string
-        Pattern pattern = Pattern.compile(h2Pattern); // create pattern instance which will be used to create matcher instance
-        Matcher matcher = pattern.matcher(htmlText);
-        System.out.println(matcher.matches());
+
+//        String h2Pattern = ".*<h2>.*";  // regex string
+
+//        Pattern pattern = Pattern.compile(h2Pattern); // create pattern instance which will be used to create matcher instance
+//        Matcher matcher = pattern.matcher(htmlText);
+//        System.out.println(matcher.matches());
+
+//        String h2Pattern = "<h2>";
+//        Pattern pattern = Pattern.compile(h2Pattern);
+//        Matcher matcher = pattern.matcher(htmlText); // another instance of Matcher class
+//        //System.out.println(matcher.matches());   // false
+//        matcher.reset();
+//        int count = 0;
+//        while(matcher.find()){
+//            count++;
+//            System.out.println("Occurrence "+ count + ":"+matcher.start() +" to "+matcher.end());  //Occurrence 1:20 to 24
+//                                                                                                    //Occurrence 2:114 to 118
+//        }
+
+//        String h2GroupPattern ="(<h2>)";
+//        Pattern pattern = Pattern.compile(h2GroupPattern);
+//        Matcher matcher = pattern.matcher(htmlText);
+//        System.out.println(matcher.matches()); // false
+//        matcher.reset();
+//        while (matcher.find()){
+//            System.out.println("Occurrence:"+ matcher.group(1));  //Occurrence:<h2>
+//                                                                 //Occurrence:<h2>
+//        }
+
+//        String h2GroupPattern ="(<h2>.*</h2>)";  // * is Greedy Quantifier (Concept of Greedy Vs Reluctant(lazy) Quantifier) whereas + is reluctant quantifier
+//        //Regex has grabbed everything from opening tag of one h2 to closing tag of second h2
+//        Pattern pattern = Pattern.compile(h2GroupPattern);
+//        Matcher matcher = pattern.matcher(htmlText);
+//        System.out.println(matcher.matches()); // false
+//        matcher.reset();
+//        while (matcher.find()){
+//            System.out.println("Occurrence:"+ matcher.group(1)); //Occurrence:<h2>Sub heading </h2><p>This is paragraph about something </p><p>This is another paragraph</p><h2>Summary</h2>
+//
+//        }
+
+//        String h2GroupPattern ="(<h2>.*?</h2>)";  // * is Greedy Quantifier (Concept of Greedy Vs Reluctant(lazy) Quantifier) whereas + is reluctant quantifier
+//        //Regex has grabbed everything from opening tag of one h2 to closing tag of second h2
+//        Pattern pattern = Pattern.compile(h2GroupPattern);
+//        Matcher matcher = pattern.matcher(htmlText);
+//        System.out.println(matcher.matches()); // false
+//        matcher.reset();
+//        while (matcher.find()){
+//            System.out.println("Occurrence:"+ matcher.group(1));  // Occurrence:<h2>Sub heading </h2>
+//                                                                    //Occurrence:<h2>Summary</h2>
+//        }
 
 
+//        String h2GroupPattern ="(<h2>.+?</h2>)";  // * is Greedy Quantifier (Concept of Greedy Vs Reluctant(lazy) Quantifier) whereas + is reluctant quantifier
+//        //Regex has grabbed everything from opening tag of one h2 to closing tag of second h2
+//        Pattern pattern = Pattern.compile(h2GroupPattern);
+//        Matcher matcher = pattern.matcher(htmlText);
+//        System.out.println(matcher.matches()); // false
+//        matcher.reset();
+//        while (matcher.find()){
+//            System.out.println("Occurrence:"+ matcher.group(1));
+//    //            Occurrence:<h2>Sub heading </h2>
+//    //            Occurrence:<h2>Summary</h2>
+//        }
+
+
+//        String h2GroupPattern ="(<h2>)(.+?)(</h2>)";  // * is Greedy Quantifier (Concept of Greedy Vs Reluctant(lazy) Quantifier) whereas + is reluctant quantifier
+//        //Regex has grabbed everything from opening tag of one h2 to closing tag of second h2
+//        Pattern pattern = Pattern.compile(h2GroupPattern);
+//        Matcher matcher = pattern.matcher(htmlText);
+//        System.out.println(matcher.matches()); // false
+//        matcher.reset();
+//        while (matcher.find()){
+//            System.out.println("Occurrence:"+ matcher.group(2));
+//     //            Occurrence:Sub heading
+//     //            Occurrence:Summary
+//        }
+
+
+        //AND , OR , NOT operators in regex
+        //"abc"  -->  "a" and "b"  and "c"
+        // [Hh]arry  <-- OR is used here  --> [H|h]arry
+        // Both are same (above case)
+        //[^abc]  <-- NOT is used here(when it is first character within square braces)
+
+        //All occurrences of t not followed by v
+//        String tvTest ="tstvtkt";
+//        String tNotVRegex = "t[^v]";
+//        //above regex will not count the last t in the string tvTest (as it is not followed by any character and for this regx t match there should be atleast one character after t)
+//        Pattern pattern = Pattern.compile(tNotVRegex);
+//        Matcher matcher = pattern.matcher(tvTest);
+//        int count = 0;
+//        while (matcher.find()){
+//            count++;
+//            System.out.println("Occurrence "+count+" : "+matcher.start()+" to "+matcher.end());//Occurrence 1 : 0 to 2
+//                                                                                               //Occurrence 2 : 4 to 6
+//        }
+
+//        String tvTest ="tstvtkt";
+//        String tNotVRegex = "t(?!v)"; // but this regex will count all t not followed by v including the last t
+//        Pattern pattern = Pattern.compile(tNotVRegex);
+//        Matcher matcher = pattern.matcher(tvTest);
+//        int count = 0;
+//        while (matcher.find()){
+//            count++;
+//            System.out.println("Occurrence "+count+" : "+matcher.start()+" to "+matcher.end());  //Occurrence 1 : 0 to 1
+//                                                                                                 //Occurrence 2 : 4 to 5
+//                                                                                                 //Occurrence 3 : 6 to 7
+//        }
+
+
+        //MATCH THE PHONE NUMBER
+        // "^([\(]{1}[0-9]{3}[\)]{1}[0-9]{3}[\-]{1}[0-9]{4}$ )"
+
+//        String phone1 = "1234567890";  // should'nt match
+//        String phone2 = "(123) 456-7890"; // will match
+//        String regex = "^[\(]{1}[0-9]{3}[\)]{1}[0-9]{3}[\-]{1}[0-9]{4}$]";  // ERROR
 
 
     }
