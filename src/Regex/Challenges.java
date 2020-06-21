@@ -60,5 +60,13 @@ public class Challenges {
         System.out.println(challenge5.matches("[abcdef]+"));  //false
         System.out.println(challenge5.matches("[a-g]+"));    // true
 
+        /**
+         * CHALLENGE 6
+         * Write a regex that will only match challenge5 string int its entirety
+         */
+        System.out.println(challenge5.matches("^a{3}bc{8}d{3}ef{3}g$")); // true
+        System.out.println(challenge5.replaceAll("^a{3}bc{8}d{3}ef{3}g$","REPLACED"));  //REPLACED
+
+
     }
 }
