@@ -67,6 +67,17 @@ public class Challenges {
         System.out.println(challenge5.matches("^a{3}bc{8}d{3}ef{3}g$")); // true
         System.out.println(challenge5.replaceAll("^a{3}bc{8}d{3}ef{3}g$","REPLACED"));  //REPLACED
 
+        /**
+         * CHALLENGE 7
+         * Write a regex that will match a string that starts with a series of letters.
+         * The letters must be followed by a period.After the period, there must be a series of digits.
+         * The string "kjist.22" would match .
+         * The String "f5.12a" would'nt match
+         * Use this String to test your regex --> String challenge7 = "abcd.135"
+         */
+        String challenge7 = "abcd.135";
+        System.out.println(challenge7.matches("^[A-Z a-z]+\\.\\d+$"));  // true
+
 
     }
 }
