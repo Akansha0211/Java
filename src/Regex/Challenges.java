@@ -1,5 +1,8 @@
 package Regex;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Challenges {
     public static void main(String[] args) {
         /**
@@ -22,6 +25,20 @@ public class Challenges {
         String regExp = "I want a \\w+";
         System.out.println(challenge1.matches(regExp));  //true
         System.out.println(challenge2.matches(regExp));  // true
+
+        /**
+         * CHALLENGE 3
+         * In the last challenge , we used the same regular expression twice .
+         * Use the Matcher.matches() method to check  for the matches , instead  of String.matches() , for the regex that uses \w+.
+         * Hint:You will have to compile a pattern
+         */
+
+        String regExp3 = "I want a \\w+";
+        Pattern pattern = Pattern.compile(regExp3);
+        Matcher matcher = pattern.matcher(challenge1);
+        System.out.println(matcher.matches());
+        matcher = pattern.matcher(challenge2);  //true
+        System.out.println(matcher.matches());  //true
 
     }
 }
