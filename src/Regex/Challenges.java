@@ -49,5 +49,16 @@ public class Challenges {
         System.out.println(challenge4.replaceAll(" ","_"));  // The_place_all_blanks_with_underscores
         System.out.println(challenge4.replaceAll("\\s","_")); //The_place_all_blanks_with_underscores
 
+        /**
+         * CHALLENGE 5
+         * Write a regex expression that will match the following String in its entirety.
+         * String challenge5 = "aaabccccccccdddefffg"
+         * Use the following String.matches() method to verify your answer.
+         *
+         */
+        String challenge5 = "aaabccccccccdddefffg";
+        System.out.println(challenge5.matches("[abcdef]+"));  //false
+        System.out.println(challenge5.matches("[a-g]+"));    // true
+
     }
 }
