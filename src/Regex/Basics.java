@@ -230,9 +230,13 @@ public class Basics {
         //MATCH THE PHONE NUMBER
         // "^([\(]{1}[0-9]{3}[\)]{1}[0-9]{3}[\-]{1}[0-9]{4}$ )"
 
-//        String phone1 = "1234567890";  // should'nt match
-//        String phone2 = "(123) 456-7890"; // will match
-//        String regex = "^[\(]{1}[0-9]{3}[\)]{1}[0-9]{3}[\-]{1}[0-9]{4}$]";  // ERROR
+        String phone1 = "1234567890";  // should'nt match
+        String phone2 = "(123) 456-7890"; // will match
+
+        //NOT GIVING DESIRED OUTPUT
+        System.out.println("phone1 "+phone1.matches("^([\\(]{1}[0-9]{3}[\\)]{1}[ ]{1}[0-9]{3}[\\-]{1}[0-9]{4}$ )"));
+        System.out.println("phone2 "+phone2.matches("^([\\(]{1}[0-9]{3}[\\)]{1}[ ]{1}[0-9]{3}[\\-]{1}[0-9]{4}$ )"));
+
 
 
     }
