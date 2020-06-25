@@ -93,6 +93,63 @@ public class Challenges {
                                                                     //Occurrences :7
                                                                     //Occurrences :999
         }
+        /**
+         * CHALLENGE 11
+         * Suppose we have following String containing points on a graph with curly braces, extract what's in the curly braces
+         */
+        String challenge11 = "{0,2},{0,5},{1,3},{2,4}";
+        Pattern pattern11 = Pattern.compile("\\{(.+?)\\}");
+        Matcher matcher11 = pattern11.matcher(challenge11);
+        while (matcher11.find()){
+            System.out.println("Occurrence:"+matcher11.group(1));   //Occurrence:0,2
+                                                                    //Occurrence:0,5
+                                                                    //Occurrence:1,3
+                                                                    //Occurrence:2,4
+            System.out.println("********************");
+
+        }
+
+        /**
+         * CHALLENGE 11a
+         * only print numbers within curly braces
+         */
+        String challenge11a = "{0,2},{0,5},{1,3},{2,4},{x,y},{6,34},{11,12}";
+        Pattern pattern11a = Pattern.compile("\\{(\\d+,\\d+)\\}");
+        Matcher matcher11a =  pattern11a.matcher(challenge11a);
+        while(matcher11a.find()){
+            System.out.println("Occurrences:"+matcher11a.group(1));
+//            Occurrences:0,2
+//            Occurrences:0,5
+//            Occurrences:1,3
+//            Occurrences:2,4
+//            Occurrences:6,34
+//            Occurrences:11,12
+
+        }
+
+        /**
+         * CHALLENGE 12
+         * Write a regex that will match a 5 digit US Zip code , Use "11111" as your test string
+         */
+        String challenge12 = "11111";
+        System.out.println(challenge12.matches("^\\d{5}$")); // true
+
+        /**
+         * CHALLENGE 13
+         * US Zip codes can be followed by a dash and another four numbers.
+         * Write a regex that will match those zip codes .Use "11111-1111" as your test string
+         */
+        String challenge13 = "11111-1111";
+        System.out.println(challenge13.matches("^\\d{5}-\\d{4}$"));  //true
+
+        System.out.println("**************");
+
+        /**
+         * CHALLENGE 14
+         * Write a regex that will match 5 digit Us zip codes and zip codes that contain the optional 4 digit preceded by a dash.
+         */
+        System.out.println(challenge12.matches("^\\d{5}(-\\d{4})?$")); // true
+        System.out.println(challenge13.matches("^\\d{5}(-\\d{4})?$"));  // true
 
 
     }
