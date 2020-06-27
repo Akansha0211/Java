@@ -34,9 +34,10 @@ public class Theatre {
         }
         if (requestedSeat==null){
             System.out.println("There is no seat"+seatNumber);
-
+            return false;
         }
-        return false;
+        return requestedSeat.reserve();
+
     }
 
     public  class Seat{
@@ -47,6 +48,26 @@ public class Theatre {
         }
         public String getSeatNum(){
             return seatNum;
+        }
+
+        public boolean reserve(){
+            if (!this.reserved){
+                this.reserved = true;
+                System.out.println("Seat "+seatNum+" reserved");
+                return true;
+            }else {
+                return false;
+            }
+        }
+        public boolean cancel(){
+            if (this.reserved){
+                this.reserved =  false;
+                System.out.println("Resrvation of seats"+seatNum+ "cancelled");
+                return true;
+            }
+            else {
+                return false;
+            }
         }
     }
 
