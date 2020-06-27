@@ -32,24 +32,48 @@ public class MapProgram {
 
 
 
-        if (languages.containsKey("Java")){
-            System.out.println("Java already exists");
-        }else {
-            languages.put("Java","a compiled high level, object-oriented , platform independent language");
-            System.out.println("Java added successfully");
-        }
+//        if (languages.containsKey("Java")){
+//            System.out.println("Java already exists");
+//        }else {
+//            languages.put("Java","a compiled high level, object-oriented , platform independent language");
+//            System.out.println("Java added successfully");
+//        }
+//        languages.put("Python","an interpreted, object-oriented ,high level programming language with dynamic semantics");
+//        languages.put("Algol","an algorithmic language");
+//        languages.put("BASIC","Beginners all purpose symbolic Instruction Code");
+//        languages.put("Lisp","Therein lies madness");
+//        if (languages.containsKey("Java")){
+//            System.out.println("Java is already in the map");
+//        }else {
+//            languages.put("Java","this course is for Java");
+//        }
+//        System.out.println("****************");
+//        for (String key : languages.keySet()){
+//            System.out.println(key+":"+languages.get(key));
+//        }
+
+        //OUPUT  :There is no order in the output
+//        Java:a compiled high level, object-oriented , platform independent language
+//        BASIC:Beginners all purpose symbolic Instruction Code
+//        Lisp:Therein lies madness
+//        Python:an interpreted, object-oriented ,high level programming language with dynamic semantics
+//        Algol:an algorithmic language
+
+
+
+        languages.put("Java","a compiled high level, object-oriented , platform independent language");
         languages.put("Python","an interpreted, object-oriented ,high level programming language with dynamic semantics");
         languages.put("Algol","an algorithmic language");
         languages.put("BASIC","Beginners all purpose symbolic Instruction Code");
         languages.put("Lisp","Therein lies madness");
-        if (languages.containsKey("Java")){
-            System.out.println("Java is already in the map");
+        languages.remove("Lisp");
+        if (languages.remove("Algol","a family of of algorithmic languages")){
+            System.out.println("Algol removed");
         }else {
-            languages.put("Java","this course is for Java");
+            System.out.println("Algol not removed, key-value pair not found");
         }
-        System.out.println("****************");
         for (String key : languages.keySet()){
-            System.out.println(key+":"+languages.get(key));
+            System.out.println(key+":"+ languages.get(key));
         }
 
 
