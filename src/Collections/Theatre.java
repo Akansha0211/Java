@@ -19,6 +19,11 @@ public class Theatre {
     public String getTheatreName(){
         return theatreName;
     }
+    public void getSeats(){
+        for (Seat seat : seats){
+            System.out.println(seat);
+        }
+    }
 
     public  class Seat{
         String seatNum;
