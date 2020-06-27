@@ -61,24 +61,56 @@ public class MapProgram {
 
 
 
+//        languages.put("Java","a compiled high level, object-oriented , platform independent language");
+//        languages.put("Python","an interpreted, object-oriented ,high level programming language with dynamic semantics");
+//        languages.put("Algol","an algorithmic language");
+//        languages.put("BASIC","Beginners all purpose symbolic Instruction Code");
+//        languages.put("Lisp","Therein lies madness");
+//        languages.remove("Lisp");
+//        if (languages.remove("Algol","a family of of algorithmic languages")){
+//            System.out.println("Algol removed");
+//        }else {
+//            System.out.println("Algol not removed, key-value pair not found");
+//        }
+//        System.out.println(languages.replace("Lisp","a functional programming language with imperative features")); // null
+//        System.out.println(languages.replace("Scala","this will not work")); // null
+//        for (String key : languages.keySet()){
+//            System.out.println(key+":"+ languages.get(key));
+//        }
+
+        //OUTPUT : key-value pair of Lisp and its corresponding value is removed due to remove() method. This has no relation with replace() method
+//        Java:a compiled high level, object-oriented , platform independent language
+//        BASIC:Beginners all purpose symbolic Instruction Code
+//        Python:an interpreted, object-oriented ,high level programming language with dynamic semantics
+//        Algol:an algorithmic language
+
         languages.put("Java","a compiled high level, object-oriented , platform independent language");
         languages.put("Python","an interpreted, object-oriented ,high level programming language with dynamic semantics");
         languages.put("Algol","an algorithmic language");
         languages.put("BASIC","Beginners all purpose symbolic Instruction Code");
         languages.put("Lisp","Therein lies madness");
-        languages.remove("Lisp");
-        if (languages.remove("Algol","a family of of algorithmic languages")){
-            System.out.println("Algol removed");
+        //languages.remove("Lisp");
+//        if (languages.remove("Algol","a family of of algorithmic languages")){
+//            System.out.println("Algol removed");
+//        }else {
+//            System.out.println("Algol not removed, key-value pair not found");
+//        }
+        if (languages.replace("Lisp","Therein lies madness","a functional programming language with imperative features")){
+            System.out.println("Lisp replaced");
         }else {
-            System.out.println("Algol not removed, key-value pair not found");
+            System.out.println("Lisp was not replaced");
         }
         for (String key : languages.keySet()){
             System.out.println(key+":"+ languages.get(key));
         }
 
-
-
-
+        //OUTPUT:
+//        Lisp replaced
+//        Java:a compiled high level, object-oriented , platform independent language
+//        BASIC:Beginners all purpose symbolic Instruction Code
+//        Lisp:a functional programming language with imperative features
+//        Python:an interpreted, object-oriented ,high level programming language with dynamic semantics
+//        Algol:an algorithmic language
 
     }
 }
